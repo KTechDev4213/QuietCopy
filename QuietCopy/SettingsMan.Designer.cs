@@ -31,6 +31,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.destDirTbox = new System.Windows.Forms.TextBox();
             this.destDirBut = new System.Windows.Forms.Button();
+            this.specYes = new System.Windows.Forms.RadioButton();
+            this.specNo = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.specDirPthTxtBx = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -58,16 +63,68 @@
             this.destDirBut.Text = "....";
             this.destDirBut.UseVisualStyleBackColor = true;
             // 
+            // specYes
+            // 
+            this.specYes.AutoSize = true;
+            this.specYes.Location = new System.Drawing.Point(178, 154);
+            this.specYes.Name = "specYes";
+            this.specYes.Size = new System.Drawing.Size(43, 17);
+            this.specYes.TabIndex = 3;
+            this.specYes.TabStop = true;
+            this.specYes.Text = "Yes";
+            this.specYes.UseVisualStyleBackColor = true;
+            // 
+            // specNo
+            // 
+            this.specNo.AutoSize = true;
+            this.specNo.Location = new System.Drawing.Point(178, 178);
+            this.specNo.Name = "specNo";
+            this.specNo.Size = new System.Drawing.Size(39, 17);
+            this.specNo.TabIndex = 4;
+            this.specNo.TabStop = true;
+            this.specNo.Text = "No";
+            this.specNo.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 127);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(175, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Copy from a specific folder on drive:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(36, 220);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "copy-from folder location";
+            // 
+            // specDirPthTxtBx
+            // 
+            this.specDirPthTxtBx.Location = new System.Drawing.Point(178, 217);
+            this.specDirPthTxtBx.Name = "specDirPthTxtBx";
+            this.specDirPthTxtBx.Size = new System.Drawing.Size(100, 20);
+            this.specDirPthTxtBx.TabIndex = 7;
+            // 
             // SettingsMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.specDirPthTxtBx);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.specNo);
+            this.Controls.Add(this.specYes);
             this.Controls.Add(this.destDirBut);
             this.Controls.Add(this.destDirTbox);
             this.Controls.Add(this.label1);
             this.Name = "SettingsMan";
-            this.Text = "SettingsMan";
+            this.Text = "Preferences";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,5 +135,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox destDirTbox;
         private System.Windows.Forms.Button destDirBut;
+        private System.Windows.Forms.RadioButton specYes;
+        private System.Windows.Forms.RadioButton specNo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox specDirPthTxtBx;
     }
 }
