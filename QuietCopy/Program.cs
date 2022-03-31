@@ -18,6 +18,10 @@ namespace QuietCopy
         private static string destPath;
         static void Main(string[] args)
         {
+            if (args[0] == "--edit"||args[0] == "-e")
+            {
+                Application.Run(new SettingsMan());
+            }
             //check if registry need to be edited
             if(Settings.Default.setUp == false)
             {

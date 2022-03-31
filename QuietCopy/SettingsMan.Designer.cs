@@ -36,6 +36,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.specDirPthTxtBx = new System.Windows.Forms.TextBox();
+            this.saveBut = new System.Windows.Forms.Button();
+            this.cancelBut = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -73,6 +76,7 @@
             this.specYes.TabStop = true;
             this.specYes.Text = "Yes";
             this.specYes.UseVisualStyleBackColor = true;
+            this.specYes.CheckedChanged += new System.EventHandler(this.specYes_CheckedChanged);
             // 
             // specNo
             // 
@@ -97,6 +101,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Enabled = false;
             this.label3.Location = new System.Drawing.Point(36, 220);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 13);
@@ -105,16 +110,47 @@
             // 
             // specDirPthTxtBx
             // 
+            this.specDirPthTxtBx.Enabled = false;
             this.specDirPthTxtBx.Location = new System.Drawing.Point(178, 217);
             this.specDirPthTxtBx.Name = "specDirPthTxtBx";
             this.specDirPthTxtBx.Size = new System.Drawing.Size(100, 20);
             this.specDirPthTxtBx.TabIndex = 7;
             // 
+            // saveBut
+            // 
+            this.saveBut.Location = new System.Drawing.Point(259, 306);
+            this.saveBut.Name = "saveBut";
+            this.saveBut.Size = new System.Drawing.Size(75, 23);
+            this.saveBut.TabIndex = 8;
+            this.saveBut.Text = "Save";
+            this.saveBut.UseVisualStyleBackColor = true;
+            // 
+            // cancelBut
+            // 
+            this.cancelBut.Location = new System.Drawing.Point(140, 306);
+            this.cancelBut.Name = "cancelBut";
+            this.cancelBut.Size = new System.Drawing.Size(75, 23);
+            this.cancelBut.TabIndex = 9;
+            this.cancelBut.Text = "Cancel";
+            this.cancelBut.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(42, 306);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "OK";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // SettingsMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(385, 353);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cancelBut);
+            this.Controls.Add(this.saveBut);
             this.Controls.Add(this.specDirPthTxtBx);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -140,5 +176,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox specDirPthTxtBx;
+        private System.Windows.Forms.Button saveBut;
+        private System.Windows.Forms.Button cancelBut;
+        private System.Windows.Forms.Button button1;
     }
 }

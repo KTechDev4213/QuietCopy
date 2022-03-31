@@ -16,5 +16,14 @@ namespace QuietCopy
         {
             InitializeComponent();
         }
+
+        private void specYes_CheckedChanged(object sender, EventArgs e)
+        {
+            if(specYes.Checked == true)
+            {
+                specDirPthTxtBx.Enabled = true;
+                label3.Enabled = true;
+            }
+        }
     }
 }
