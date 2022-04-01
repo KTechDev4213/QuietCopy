@@ -29,11 +29,13 @@ namespace QuietCopy
         }
         void save()
         {
-
+            Settings.Default.destDir = destDirTbox.Text;
+            Settings.Default.specDir = specYes.Checked;
+            Settings.Default.specDirPath = specDirPthTxtBx.Text;
         }
         void load()
         {
-            Settings.Default.destDir = destDirTbox.Text;
+            destDirTbox.Text = Settings.Default.destDir;
         }
 
         private void okBut_Click(object sender, EventArgs e)
