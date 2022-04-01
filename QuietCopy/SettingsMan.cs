@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuietCopy.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace QuietCopy
         public SettingsMan()
         {
             InitializeComponent();
+            load();
         }
 
         private void specYes_CheckedChanged(object sender, EventArgs e)
@@ -23,6 +25,40 @@ namespace QuietCopy
             {
                 specDirPthTxtBx.Enabled = true;
                 label3.Enabled = true;
+            }
+        }
+        void save()
+        {
+
+        }
+        void load()
+        {
+            Settings.Default.destDir = destDirTbox.Text;
+        }
+
+        private void okBut_Click(object sender, EventArgs e)
+        {
+            save();
+            Close();
+        }
+
+        private void cancelBut_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void saveBut_Click(object sender, EventArgs e)
+        {
+            save();
+        }
+
+        private void destDirBut_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.RootFolder = Environment.SpecialFolder.MyVideos; 
+            if(dialog.ShowDialog() == DialogResult.OK)
+            {
+                destDirTbox.Text = dialog.SelectedPath;
             }
         }
     }

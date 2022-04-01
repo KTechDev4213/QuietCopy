@@ -38,7 +38,7 @@
             this.specDirPthTxtBx = new System.Windows.Forms.TextBox();
             this.saveBut = new System.Windows.Forms.Button();
             this.cancelBut = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.okBut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -65,6 +65,7 @@
             this.destDirBut.TabIndex = 2;
             this.destDirBut.Text = "....";
             this.destDirBut.UseVisualStyleBackColor = true;
+            this.destDirBut.Click += new System.EventHandler(this.destDirBut_Click);
             // 
             // specYes
             // 
@@ -124,6 +125,7 @@
             this.saveBut.TabIndex = 8;
             this.saveBut.Text = "Save";
             this.saveBut.UseVisualStyleBackColor = true;
+            this.saveBut.Click += new System.EventHandler(this.saveBut_Click);
             // 
             // cancelBut
             // 
@@ -133,22 +135,24 @@
             this.cancelBut.TabIndex = 9;
             this.cancelBut.Text = "Cancel";
             this.cancelBut.UseVisualStyleBackColor = true;
+            this.cancelBut.Click += new System.EventHandler(this.cancelBut_Click);
             // 
-            // button1
+            // okBut
             // 
-            this.button1.Location = new System.Drawing.Point(42, 306);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.okBut.Location = new System.Drawing.Point(42, 306);
+            this.okBut.Name = "okBut";
+            this.okBut.Size = new System.Drawing.Size(75, 23);
+            this.okBut.TabIndex = 10;
+            this.okBut.Text = "OK";
+            this.okBut.UseVisualStyleBackColor = true;
+            this.okBut.Click += new System.EventHandler(this.okBut_Click);
             // 
             // SettingsMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(385, 353);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.okBut);
             this.Controls.Add(this.cancelBut);
             this.Controls.Add(this.saveBut);
             this.Controls.Add(this.specDirPthTxtBx);
@@ -178,6 +182,6 @@
         private System.Windows.Forms.TextBox specDirPthTxtBx;
         private System.Windows.Forms.Button saveBut;
         private System.Windows.Forms.Button cancelBut;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button okBut;
     }
 }
