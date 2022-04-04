@@ -16,11 +16,12 @@ namespace QuietCopy
     {
         static string[] drives;
         private static string destPath;
+        [STAThread]
         static void Main(string[] args)
         {
             if (args.Length != 0)
             {
-                if (args[0] == "--settings" || args[0] == "-s")
+                if (args[0].Contains("--settings")|| args[0].Contains("-s"))
                 {
                     Application.Run(new SettingsMan());
                 }
@@ -77,6 +78,7 @@ namespace QuietCopy
         }
         static void copyDir(string dir)
         {
+            //copy all files in directory
             foreach (string path in Directory.GetFiles(dir))
             {
 
@@ -93,6 +95,7 @@ namespace QuietCopy
                     }
                 }
             }
+            //run copy dire on all subdirs
             foreach(string path in Directory.GetDirectories(dir))
             {
                 copyDir(path);

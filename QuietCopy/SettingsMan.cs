@@ -56,11 +56,18 @@ namespace QuietCopy
 
         private void destDirBut_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog dialog = new FolderBrowserDialog();
-            dialog.RootFolder = Environment.SpecialFolder.MyVideos; 
-            if(dialog.ShowDialog() == DialogResult.OK)
+            try
             {
-                destDirTbox.Text = dialog.SelectedPath;
+                FolderBrowserDialog dialog = new FolderBrowserDialog();
+                dialog.RootFolder = Environment.SpecialFolder.MyVideos;
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    destDirTbox.Text = dialog.SelectedPath;
+                }
+            }
+            catch (Exception ex)
+            { 
+                MessageBox.Show(ex.Message);
             }
         }
     }
