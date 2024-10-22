@@ -1,3 +1,1 @@
-QuietCopy
-Quiet copy is a automatic copier.
-meaning: that everytime someone connects a new drive to your computer it copies all files of a specific time to a specific folder on your computer.
+A winforms app that automaticly copies all video files off any flash drives connected to the computer.
